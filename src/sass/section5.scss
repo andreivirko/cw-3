@@ -1,0 +1,157 @@
+/* properties for section 5 */
+
+.s5 {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.s5_title {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  color: aquamarine;
+  position: relative;
+  font-size: 18px;
+  margin-bottom: 60px;
+}
+
+.s5_title::before,
+.s5_title::after {
+  content: "";
+  height: 1px;
+  width: 60px;
+  border: 1px solid aquamarine;
+  background-color: aquamarine;
+  position: absolute;
+  top: 45%;
+}
+
+.s5_title::before {
+  left: 61%;
+}
+
+.s5_title::after {
+  right: 61%;
+}
+
+.s5_list-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.s5_list {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.s5_item {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.s5_item img {
+  border-radius: 50%;
+}
+
+.s5_inner-item-wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.s5_inner-item-wrapper img,
+.s5_inner-item-wrapper p {
+  display: block;
+  margin: 10px auto;
+}
+
+.s5_slider-control {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  background: rgba(127, 255, 212, 0.514);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: yellow;
+  opacity: 0.5;
+}
+
+.s5_right-show {
+  display: flex;
+}
+
+.s5_slider-control:hover,
+.s5_slider-control:focus {
+  color: thistle;
+  outline: 0;
+  opacity: 0.9;
+}
+
+.s5_left {
+  left: 0;
+}
+
+.s5_right {
+  right: 0;
+}
+
+.s5_slider-control::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.s5_left::before {
+  background-image: url("/image/back.png");
+}
+
+.s5_right::before {
+  background-image: url("/image/next.png");
+}
+
+@media (min-width: 768px) {
+
+  /* properties for section 5 */
+
+  .s5_title::before {
+    left: 36%;
+  }
+
+  .s5_title::after {
+    right: 36%;
+  }
+
+  .s5_inner-item-wrapper img,
+  .s5_inner-item-wrapper p {
+    padding: 0 66px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  /* properties for section 5 */
+
+  .s5_title::before {
+    left: 41%;
+  }
+
+  .s5_title::after {
+    right: 41%;
+  }
+
+  .s5_inner-item-wrapper img,
+  .s5_inner-item-wrapper p {
+    padding: 0 144px;
+  }
+
+}
